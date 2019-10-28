@@ -15,6 +15,8 @@
     resources: the controller of the the project
     service: contains the logic and the business of the project
 
+#test case for student register in class SpringBootWithH2ApplicationTests
+
 #using struct mapper for mapping between Models And Entities
 
 

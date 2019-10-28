@@ -33,4 +33,10 @@ public class Student {
 	@Column(name = "GENDER")
 	private String gender;
 
+	public Student(Long id, String email, String password) {
+		this.id = id;
+		this.email = email;
+		this.password = password;
+	}
+
 }
