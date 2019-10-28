@@ -1,7 +1,13 @@
 
 #maven application developed by spring boot, spring data, H2, Lombok plugin
+#you can take a look on Rest Requests in the below
 
-#using java 1.8
+#using JDK 1.8
+
+#open project as maven project
+    -download pom file dependencies
+    -edit configuration with select jdk, and main class
+    -clean install Run
 
 #for simplicity all the project under one package called com
     common: contains models
@@ -16,7 +22,7 @@
 http://localhost:8082/h2-console
 with configuration data inside application.properties file
 
-#there are logs using @Slf4j from lombok but not in all methods
+#there are logs using @Slf4j from lombok
 
 
 #Note
@@ -26,11 +32,42 @@ with configuration data inside application.properties file
 
 
 all endpoints:
+use POSTMAN or any another Rest tool
 
-1)
-2)
-3)
-4)
-5)
-6)
-7)
+1) student register just email and password that are mandatory
+localhost:appPort/students/register :-post
+{
+"email" : "Alex@a.com",
+"password": "123",
+"gender": "",
+"dob"  ""
+}
+
+
+2) student login
+localhost:appPort/students/login :-post
+{
+"email" : "Alex@a.com",
+"password": "123"
+}
+
+
+3) save a new course
+localhost:appPort/courses :-post
+{
+	"name": "math" ,
+	"description": "for kids"
+}
+
+
+4) get specific student's courses
+localhost:8082/courses/students/{studentId} :-get
+
+5) register student on course
+localhost:8082/courses/{courseId}/students/{studentId}/register :- post
+
+6) unregister student from course
+localhost:8082/courses/{courseId}/students/{studentId}/un-register :-post
+
+7) get all courses
+localhost:8082/courses :-get

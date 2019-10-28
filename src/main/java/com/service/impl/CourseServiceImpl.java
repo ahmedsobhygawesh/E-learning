@@ -38,7 +38,8 @@ public class CourseServiceImpl implements CourseService {
 	public List<CourseModel> findStudentCourses(Long studentIdentifier) {
 		return studentCourseRepository.findCoursesByStudentId(studentIdentifier)
 				.stream()
-				.map(c -> courseMapper.toModel(c)).collect(Collectors.toList());
+				.map(c -> courseMapper.toModel(c))
+				.collect(Collectors.toList());
 
 	}
 
@@ -62,10 +63,12 @@ public class CourseServiceImpl implements CourseService {
 	@Override
 	public void unRegisterToCourse(Long studentIdentifier, Long courseIdentifier) {
 		studentCourseRepository.deleteCoursesByStudentId(studentIdentifier, courseIdentifier);
+		log.info("unregister Done");
 	}
 
 	@Override
 	public void saveCourse(CourseModel courseModel) {
 		courseRepository.save(courseMapper.toEntity(courseModel));
+		log.info("course saved");
 	}
 }

@@ -21,6 +21,7 @@ public class StudentServiceImpl implements StudentService {
 		if (studentModel == null) {
 			throw new Exception("Bad Credential");
 		}
+		log.info("login successful");
 		return studentModel;
 	}
 
