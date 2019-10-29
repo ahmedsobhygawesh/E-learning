@@ -1,24 +1,27 @@
 
+E-learning
+
+***
 #maven application developed by spring boot, spring data, H2, Lombok plugin
 #you can take a look on Rest Requests in the below
-
+***
 #using JDK 1.8
-
+***
 #open project as maven project
     -download pom file dependencies
     -edit configuration with select jdk, and main class
     -clean install Run
-
+***
 #for simplicity all the project under one package called com
     ***common: contains models
     ***repository: contains entities and repositories
     ***resources: the controller of the the project
     ***service: contains the logic and the business of the project
-
+***
 #test case for student register in class SpringBootWithH2ApplicationTests
-
+***
 #using struct mapper for mapping between Models And Entities
-
+***
 
 #for opening the h2 console after running the project
 #http://localhost:appPort/h2-console
@@ -26,10 +29,10 @@
 
 #there are logs using @Slf4j from lombok
 
-
+***
 #Note
-***1)deleted the StudentCourse record after unRegister but the best practise that put a flag like ACTIVE, DELETED
-
+1)deleted the StudentCourse record after unRegister but the best practise that put a flag like ACTIVE, DELETED
+***
 #all endpoints:
 #use POSTMAN or any another Rest tool
 ***
