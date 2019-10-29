@@ -58,8 +58,6 @@ public class CourseServiceImpl implements CourseService {
 
 	}
 
-	@Transactional
-	@Modifying
 	@Override
 	public void unRegisterToCourse(Long studentIdentifier, Long courseIdentifier) {
 		studentCourseRepository.deleteCoursesByStudentId(studentIdentifier, courseIdentifier);
